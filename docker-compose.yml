@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    container_name: agriculture-disease-api
+    ports:
+      - "10000:10000"
+    environment:
+      - APP_NAME=Agriculture Disease Detection API
+      - DEBUG=False
+      - HOST=0.0.0.0
+      - PORT=10000
+      - LOG_LEVEL=INFO
+    volumes:
+      - ./logs:/app/logs
+      - ./app/models:/app/app/models
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:10000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s

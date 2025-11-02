@@ -1,0 +1,7 @@
+"""
+Configuration Package
+"""
+from .dataset_urls import DATASET_CONFIG, CROP_HINDI_NAMES
+from .model_config import ModelConfig
+
+__all__ = ['DATASET_CONFIG', 'CROP_HINDI_NAMES', 'ModelConfig']

@@ -1,0 +1,56 @@
+services:
+  # Web Service
+  - type: web
+    name: agriculture-disease-api
+    runtime: python
+    plan: starter
+    region: singapore
+    branch: main
+    
+    buildCommand: |
+      pip install --upgrade pip
+      pip install -r requirements.txt
+    
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port 10000
+    
+    healthCheckPath: /health
+    
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
+      
+      - key: APP_NAME
+        value: Agriculture Disease Detection API
+      
+      - key: DEBUG
+        value: false
+      
+      - key: HOST
+        value: 0.0.0.0
+      
+      - key: PORT
+        value: 10000
+      
+      - key: LOG_LEVEL
+        value: INFO
+      
+      - key: CROP_CONFIDENCE_THRESHOLD
+        value: 0.60
+      
+      - key: DISEASE_CONFIDENCE_THRESHOLD
+        value: 0.50
+      
+      - key: MAX_IMAGE_SIZE
+        value: 10485760
+      
+      - key: PLANTIX_API_KEY
+        sync: false  # Set manually in Render dashboard
+      
+    # Auto-deploy on git push
+    autoDeploy: true
+    
+    # Disk for model storage
+    disk:
+      name: model-storage
+      mountPath: /app/app/models
+      sizeGB: 2
