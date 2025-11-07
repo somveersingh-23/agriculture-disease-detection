@@ -73,3 +73,10 @@ htmlcov/
 *.tmp
 *.bak
 
+# Ignore model files
+app/models/*.h5
+app/models/stage2_disease_models/*.h5
+
+# Keep directory structure
+!app/models/.gitkeep
+!app/models/stage2_disease_models/.gitkeep
