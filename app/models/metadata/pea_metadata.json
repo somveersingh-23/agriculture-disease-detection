@@ -1,0 +1,14 @@
+{
+  "crop_name": "pea",
+  "disease_classes": [
+    "pea_plant_dataset"
+  ],
+  "num_classes": 1,
+  "architecture": "MobileNetV2",
+  "input_shape": [
+    224,
+    224,
+    3
+  ],
+  "training_date": "2025-11-06T20:37:57.246315"
+}

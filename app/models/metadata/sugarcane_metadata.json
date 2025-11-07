@@ -1,0 +1,14 @@
+{
+  "crop_name": "sugarcane",
+  "disease_classes": [
+    "sugarcane_leafs"
+  ],
+  "num_classes": 1,
+  "architecture": "MobileNetV2",
+  "input_shape": [
+    224,
+    224,
+    3
+  ],
+  "training_date": "2025-11-06T22:26:45.725481"
+}

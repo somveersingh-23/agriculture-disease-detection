@@ -1,0 +1,16 @@
+{
+  "crop_name": "bajra",
+  "disease_classes": [
+    "test",
+    "train",
+    "valid"
+  ],
+  "num_classes": 3,
+  "architecture": "MobileNetV2",
+  "input_shape": [
+    224,
+    224,
+    3
+  ],
+  "training_date": "2025-11-06T20:04:57.010846"
+}

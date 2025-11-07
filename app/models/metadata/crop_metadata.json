@@ -1,0 +1,29 @@
+{
+  "model_name": "Stage1_CropClassifier_MobileNetV2",
+  "architecture": "MobileNetV2",
+  "input_shape": [
+    224,
+    224,
+    3
+  ],
+  "num_classes": 9,
+  "crop_classes": [
+    "bajra",
+    "cotton",
+    "jute",
+    "maize",
+    "pea",
+    "ragi",
+    "rice",
+    "sugarcane",
+    "wheat"
+  ],
+  "training_date": "2025-11-06T01:13:39.057003",
+  "total_params": 2832201,
+  "config": {
+    "batch_size": 32,
+    "epochs": 50,
+    "learning_rate": 0.0005,
+    "dropout_rate": 0.3
+  }
+}

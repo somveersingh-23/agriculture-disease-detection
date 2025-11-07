@@ -1,0 +1,14 @@
+{
+  "crop_name": "rice",
+  "disease_classes": [
+    "rice_leaf_diseases"
+  ],
+  "num_classes": 1,
+  "architecture": "MobileNetV2",
+  "input_shape": [
+    224,
+    224,
+    3
+  ],
+  "training_date": "2025-11-06T23:32:23.607329"
+}

@@ -42,3 +42,6 @@ pytest-cov==4.1.0
 
 # Logging
 colorlog==6.8.0
+
+# Add to requirements.txt
+gunicorn==21.2.0

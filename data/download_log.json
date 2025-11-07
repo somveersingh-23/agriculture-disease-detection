@@ -1,0 +1,54 @@
+{
+  "sugarcane": {
+    "source": "kaggle",
+    "dataset": "akilesh253/sugarcane-plant-diseases-dataset",
+    "timestamp": "2025-11-05 11:13:16"
+  },
+  "maize": {
+    "source": "kaggle",
+    "dataset": "smaranjitghose/corn-or-maize-leaf-disease-dataset",
+    "timestamp": "2025-11-05 11:13:57"
+  },
+  "wheat": {
+    "source": "kaggle",
+    "dataset": "kushagra3204/wheat-plant-diseases",
+    "timestamp": "2025-11-05 12:00:33"
+  },
+  "ragi": {
+    "source": "kaggle",
+    "dataset": "prajwalbax/finger-millet-ragi-dataset",
+    "timestamp": "2025-11-05 12:00:50"
+  },
+  "cotton": {
+    "source": "kaggle",
+    "dataset": "seroshkarim/cotton-leaf-disease-dataset",
+    "timestamp": "2025-11-05 12:01:37"
+  },
+  "jute": {
+    "source": "kaggle",
+    "dataset": "mdsaimunalam/jute-leaf-disease-detection",
+    "timestamp": "2025-11-05 12:21:03"
+  },
+  "pea": {
+    "source": "kaggle",
+    "dataset": "zunorain/pea-plant-dataset",
+    "timestamp": "2025-11-05 12:21:12"
+  },
+  "rice": {
+    "source": "kaggle",
+    "dataset": "vbookshelf/rice-leaf-diseases",
+    "timestamp": "2025-11-05 12:21:24"
+  },
+  "general_plants": {
+    "source": "kaggle",
+    "dataset": "vipoooool/new-plant-diseases-dataset",
+    "timestamp": "2025-11-05 12:32:41"
+  },
+  "bajra": {
+    "source": "roboflow",
+    "workspace": "leaf-chalmers",
+    "project": "pearl-millet-il2bp",
+    "version": 1,
+    "timestamp": "2025-11-05 12:51:01"
+  }
+}

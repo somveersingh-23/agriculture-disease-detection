@@ -1,0 +1,14 @@
+{
+  "crop_name": "wheat",
+  "disease_classes": [
+    "data"
+  ],
+  "num_classes": 1,
+  "architecture": "MobileNetV2",
+  "input_shape": [
+    224,
+    224,
+    3
+  ],
+  "training_date": "2025-11-07T01:01:40.265186"
+}

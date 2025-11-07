@@ -1,0 +1,15 @@
+{
+  "crop_name": "jute",
+  "disease_classes": [
+    "_aug",
+    "jute_leaf_disease_detection"
+  ],
+  "num_classes": 2,
+  "architecture": "MobileNetV2",
+  "input_shape": [
+    224,
+    224,
+    3
+  ],
+  "training_date": "2025-11-06T20:30:19.426293"
+}
