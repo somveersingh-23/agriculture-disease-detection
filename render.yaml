@@ -54,3 +54,44 @@ services:
       name: model-storage
       mountPath: /app/app/models
       sizeGB: 2
+
+
+services:
+  - type: web
+    name: agriculture-disease-api
+    runtime: python
+    region: singapore
+    plan: starter  # Free tier
+    branch: main
+    
+    buildCommand: |
+      pip install --upgrade pip
+      pip install -r requirements.txt
+      python scripts/download_models_render.py
+    
+    startCommand: gunicorn app.main:app --workers 2 --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:10000
+    
+    healthCheckPath: /health
+    
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
+      
+      - key: HF_REPO_ID
+        value: YOUR_USERNAME/agriculture-disease-detection
+      
+      - key: HF_TOKEN
+        sync: false  # Set in Render dashboard
+      
+      - key: DEBUG
+        value: false
+      
+      - key: LOG_LEVEL
+        value: INFO
+      
+      - key: MAX_IMAGE_SIZE
+        value: 10485760
+    
+    # Render Free tier has limited disk space
+    # Models download to /tmp which has more space
+
