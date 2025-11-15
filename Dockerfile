@@ -14,7 +14,6 @@ RUN apt-get update && apt-get install -y \
     libgomp1 \
     && rm -rf /var/lib/apt/lists/*
 
-
 # Copy requirements first for better caching
 COPY requirements.txt .
 
@@ -27,12 +26,12 @@ COPY . .
 # Create necessary directories
 RUN mkdir -p logs app/models/stage2_disease_models app/models/metadata
 
-# Expose port
+# Expose (Render will override internal port using $PORT)
 EXPOSE 10000
 
-# Health check
+# Health check (dynamic Render port)
 HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
-    CMD python -c "import requests; requests.get('http://localhost:10000/health')"
+    CMD python -c "import os, requests; requests.get(f'http://localhost:{os.environ.get(\"PORT\",10000)}/health')"
 
-# Run the application
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "10000"]
+# Run the application using Render dynamic $PORT
+CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port $PORT"]
