@@ -86,7 +86,7 @@ class ModelLoader:
         # 🧠 Auto-download from Hugging Face if missing
         if not os.path.exists(settings.STAGE1_MODEL_PATH):
             logger.warning("Stage 1 model not found locally. Downloading...")
-            hf_url = "https://huggingface.co/somveersingh-23/agriculture-disease-detection/tree/main/stage1_crop_classifier_mobilenetv2.h5"
+            hf_url = "https://huggingface.co/somveersingh-23/agriculture-disease-detection/resolve/main/stage1_crop_classifier_mobilenetv2.h5"
             self._download_file(hf_url, settings.STAGE1_MODEL_PATH)
 
         self.stage1_model = tf.keras.models.load_model(
