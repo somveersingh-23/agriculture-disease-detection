@@ -144,5 +144,5 @@ class CropClassificationService:
         return crop_info.get(crop_name, {})
 
 
-# Global service instance
+# Global service instanc
 crop_service = CropClassificationService()
